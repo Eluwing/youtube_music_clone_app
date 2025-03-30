@@ -5,6 +5,8 @@ import { usePathname } from "next/navigation";
 import React, { useMemo } from "react";
 import { FiCompass, FiMusic, FiPlus } from "react-icons/fi";
 import { GoHome } from "react-icons/go";
+import {dummyPlaylistArray} from "@/lib/dummyData"
+import PlayListNav from "./PlayListNav";
 
 const Navigator = () => {
   const pathname = usePathname();
@@ -60,6 +62,11 @@ const Navigator = () => {
           <FiPlus size={24}/>
           <span>새 재생목록</span>
           </div>
+      </section>
+      <section>
+        {dummyPlaylistArray.map((playlist)=>{
+          return <PlayListNav key={playlist.id} playlist={playlist} />
+        })}
       </section>
     </div>
   );
