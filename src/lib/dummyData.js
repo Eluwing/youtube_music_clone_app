@@ -101,6 +101,8 @@ export const dummyAllSongList = [
   },
 ];
 
+// @ts-ignore
+// FIX ME: タイプ設定
 export const getSongsBychannel = (channel) => {
   return dummyAllSongList.filter((song) => song.channel === channel);
 };
@@ -145,10 +147,12 @@ export const dummyPlaylistArray = [
 
 export const getAllPlaylist = async () => [...dummyPlaylistArray];
 
+// @ts-ignore
 export const getPlaylistByOwner = (owner) => {
   return dummyPlaylistArray.filter((playlist) => playlist.owner === owner);
 };
 
+// @ts-ignore
 export const getPlaylistById = async (id) => {
   return dummyPlaylistArray.filter((playlist) => playlist.id === id)?.[0];
 };
@@ -207,6 +211,7 @@ export const dummyChannelList = [
   },
 ];
 
+// @ts-ignore
 export const getChannelById = async (id) => {
   return dummyChannelList.filter((channel) => channel.id === id)?.[0];
 };
