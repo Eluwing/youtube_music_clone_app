@@ -15,5 +15,5 @@ export default IconButton;
 
 type IconButtonType = {
   icon: ReactNode;
-  onClickIcon: () => void;
+  onClickIcon?: () => void;
 };
